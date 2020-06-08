@@ -1,22 +1,35 @@
-// 関数
+//文字数を識別する関数
 
-// function 関数名(引数){
-//     // 処理
-//     return 戻り値;
-// }
-// 関数名(); //呼び出し
+//入力文字数の確認
+/*===
+    引数: text
+    外で関数を呼び出しているので戻り値にて、値を戻す必要がある。
+    returnの後には処理を取らないので、注意が必要。
+    関数を分ける。
 
-function person(name,age,weight,height) {
-    document.write(`お名前は、${name}です。年齢は、${age}歳です。体重は、${weight}kgです。身長は、${height}cmです。<br>`);
+    comment関数: 文字数を制限している関数。
+    commnetCheck: 条件式を使って、エラーチェックを行っている。
+===*/
+
+// コメント入力
+
+const input = window.prompt("コメントを入力");
+
+// 文字数を確認
+
+function commnet(text) {
+    return text.length >= 10;
 }
-// personの中はname = "高橋"
-person("高橋",20,60,175);
-person("鈴木",30,50,160);
-person("佐藤",40,55,170);
+commnet(input);
 
+// エラーの出力
 
-// function sum(x,y) {
-//     document.onplaying(x * y);
-// }
+function commnetCheck(text) {
+    if(commnet(text)) {
+        document.write("20文字以内で記入してください。");
+    } else {
+        document.write(text);
+    }
+}
 
-// sum(4 * 4);
+commnetCheck(input);
