@@ -42,10 +42,29 @@ functionを変数に代入している。functionに関数名がないため、�
 変数にて関数を宣言しているため、関数の呼び出しを変数の上に移動するとエラーが発生。
 ===*/
 
-const person = function (name,age,weight,height) {
-    document.write(`お名前は、${name}です。年齢は、${age}歳です。体重は、${weight}kgです。身長は、${height}cmです。<br>`);
-}
-person("高橋",20,60,175);
-person("鈴木",30,50,160);
-person("佐藤",40,55,170);
+// const person = function (name,age,weight,height) {
+//     document.write(`お名前は、${name}です。年齢は、${age}歳です。体重は、${weight}kgです。身長は、${height}cmです。<br>`);
+// }
+// person("高橋",20,60,175);
+// person("鈴木",30,50,160);
+// person("佐藤",40,55,170);
 
+/*===
+アロー関数について
+===*/
+//引数が一つの場合はreturnや()が省略できる
+
+// const hello = name => `こんにちは${name}さんですね`;
+
+// document.write(hello("高橋"));
+
+// 引数は2つ以上の場合は省略不可
+// const hello = (name, age) => {
+//     return `お名前は、${name}さんですね。年齢は${age}歳です。`;
+// }
+
+// document.write(hello("高橋",20));
+
+const array = ["高橋","斎藤","山田"];
+
+array.forEach(value => console.log(value));
