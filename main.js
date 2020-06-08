@@ -16,8 +16,8 @@ function person(name,age,weight,height) {
 
 
 /*===
- 戻り値の説明
- データの受け渡し
+戻り値の説明
+データの受け渡し
 ===*/
 
 
